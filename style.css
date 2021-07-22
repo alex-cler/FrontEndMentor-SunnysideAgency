@@ -8,6 +8,7 @@
     --dark-grayish-blue: hsl(213, 8%, 39%);
     --grayish-blue: hsl(232, 9%, 54%);
     --grayish-white: hsl(210, 3%, 66%);
+    --bg-white-cream: hsl(34, 100%, 98%);
     --white: hsl(0, 0%, 100%);
 }
 
@@ -31,6 +32,7 @@ html {
 
 body {
     font-family: 'Barlow', sans-serif;
+    background-color: var(--bg-white-cream);
     color: var(--dark-blue);
     font-size: 18px;
 }
@@ -60,6 +62,7 @@ header {
     background-image: url("./assets/image-header.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     min-width: 100vw;
     height: 95vh;
     text-align: center;
@@ -101,6 +104,10 @@ article {
     text-transform: uppercase;
     text-decoration: none;
     color: var(--dark-blue);
+}
+
+.info {
+    margin: 6em; 
 }
 
 .cherry {
