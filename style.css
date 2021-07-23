@@ -45,17 +45,34 @@ h1 {
     letter-spacing: 8.75px;
 }
 
+/* NavBar display */
 nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 3em;
+    padding: 2.5em 2em;
 }
 
 nav a {
     text-decoration: none;
     color: var(--white);
-    padding: 0 2em;
+    margin: 0 1.25em;
+}
+
+/* Contact link */
+.contact {
+    font-family: 'Fraunces', serif;
+    text-transform: uppercase;
+    color: var(--dark-blue);
+    background-color: var(--white);
+    padding: 1em 1.5em;
+    margin: 0 0 0 1em;
+    border-radius: 50px;
+}
+
+/* Menu burger only visible on mobile */
+nav img:last-of-type {
+    display: none;
 }
 
 header {
@@ -110,9 +127,16 @@ article {
     margin: 6em; 
 }
 
+.gallery.cherry h3,
+.gallery.orange h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.5em;
+}
+
 .cherry {
     background-image: url("./assets/image-graphic-design.jpg");
     text-align: center;
+
 }
 
 .orange {
