@@ -1,0 +1,24 @@
+{
+  "name": "SunnysideAgency",
+  "version": "1.0.0",
+  "description": "FrontEnd Mentor Challenge https://www.frontendmentor.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex-cler/FrontEndMentor-SunnysideAgency.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alex-cler/FrontEndMentor-SunnysideAgency/issues"
+  },
+  "homepage": "https://github.com/alex-cler/FrontEndMentor-SunnysideAgency#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  },
+  "compile-sass": "node-sass sass/main.scss css/style.css --watch"
+}
