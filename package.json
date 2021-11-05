@@ -1,5 +1,5 @@
 {
-  "name": "SunnysideAgency",
+  "name": "sunnysideagency",
   "version": "1.0.0",
   "description": "FrontEnd Mentor Challenge https://www.frontendmentor.io",
   "main": "index.js",
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/alex-cler/FrontEndMentor-SunnysideAgency.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "alex-cler",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/alex-cler/FrontEndMentor-SunnysideAgency/issues"
