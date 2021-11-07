@@ -21,6 +21,35 @@
 /* Colors */
 /* Fonts */
 /* Media query breakpoints */
+@-webkit-keyframes upanddown {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+@keyframes upanddown {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
 h1 {
   font-family: 'Fraunces', serif;
   font-size: 3.5em;
@@ -74,6 +103,11 @@ header {
   text-align: center;
 }
 
+.arrow {
+  -webkit-animation: upanddown 2.5s infinite;
+          animation: upanddown 2.5s infinite;
+}
+
 footer {
   background-color: #8dd3c4;
   text-align: center;
@@ -92,6 +126,7 @@ footer a {
   text-decoration: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  padding: 0 1em;
 }
 
 footer a:hover {
@@ -104,7 +139,7 @@ html {
 }
 
 body {
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
   background-color: #fffbf5;
   color: #23303e;
   font-size: 18px;
@@ -153,7 +188,7 @@ article {
 }
 
 .gallery a {
-  font-family: 'Fraunces', serif;
+  font-family: "Fraunces", sans-serif;
   text-transform: uppercase;
   text-decoration: none;
   color: #23303e;
@@ -164,12 +199,12 @@ article {
 }
 
 .gallery.cherry h3 {
-  font-family: 'Fraunces', serif;
+  font-family: "Fraunces", sans-serif;
   font-size: 1.5em;
 }
 
 .gallery.orange h3 {
-  font-family: 'Fraunces', serif;
+  font-family: "Fraunces", sans-serif;
   font-size: 1.5em;
 }
 
@@ -198,7 +233,7 @@ article {
 }
 
 .feedback h3 {
-  font-family: 'Fraunces', serif;
+  font-family: "Fraunces", sans-serif;
   color: #a6a8ab;
   text-transform: uppercase;
   letter-spacing: 5px;
