@@ -1,30 +1,6 @@
-$red: hsl(7, 99%, 70%);
-$yellow: hsl(51, 100%, 49%);
-$dark-cyan: hsl(167, 34%, 41%);
-$dark-blue : hsl(198, 62%, 26%);
-$dark-cyan-footer : hsl(167, 44%, 69%);
-$dark-blue: hsl(212, 27%, 19%);
-$dark-grayish-blue: hsl(213, 8%, 39%);
-$grayish-blue: hsl(232, 9%, 54%);
-$grayish-white: hsl(210, 3%, 66%);
-$bg-white-cream: hsl(34, 100%, 98%);
-$white: hsl(0, 0%, 100%);
-
 /* Smooth behavior */
 html {
 	scroll-behavior: smooth;
-}
-/* Resetting CSS */
-* {
-	border: 0;
-	outline: 0;
-	padding: 0;
-	margin: 0;
-	vertical-align: baseline;
-	font-weight: inherit;
-	font-family: inherit;
-	font-style: inherit;
-	font-size: 100%;
 }
 
 body {
