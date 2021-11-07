@@ -1,3 +1,15 @@
+$red: hsl(7, 99%, 70%);
+$yellow: hsl(51, 100%, 49%);
+$dark-cyan: hsl(167, 34%, 41%);
+$dark-blue : hsl(198, 62%, 26%);
+$dark-cyan-footer : hsl(167, 44%, 69%);
+$dark-blue: hsl(212, 27%, 19%);
+$dark-grayish-blue: hsl(213, 8%, 39%);
+$grayish-blue: hsl(232, 9%, 54%);
+$grayish-white: hsl(210, 3%, 66%);
+$bg-white-cream: hsl(34, 100%, 98%);
+$white: hsl(0, 0%, 100%);
+
 /* Smooth behavior */
 html {
 	scroll-behavior: smooth;
@@ -16,14 +28,14 @@ html {
 }
 body {
 	font-family: 'Barlow', sans-serif;
-	background-color: var(--bg-white-cream);
-	color: var(--dark-blue);
+	background-color: $bg-white-cream;
+	color: $dark-blue;
 	font-size: 18px;
 }
 h1 {
 	font-family: 'Fraunces', serif;
 	font-size: 3.5em;
-	color: var(--white);
+	color: $white;
 	text-transform: uppercase;
 	letter-spacing: 8.75px;
 }
@@ -35,7 +47,7 @@ nav {
 	padding: 2.5em 2em;
 	a {
 		text-decoration: none;
-		color: var(--white);
+		color: $white;
 		margin: 0 1.25em;
 	}
 	img {
@@ -47,8 +59,8 @@ nav {
 .contact {
 	font-family: 'Fraunces', serif;
 	text-transform: uppercase;
-	color: var(--dark-blue);
-	background-color: var(--white);
+	color: $dark-blue;
+	background-color: $white;
 	padding: 1em 1.5em;
 	margin: 0 0 0 1em;
 	border-radius: 50px;
@@ -80,14 +92,14 @@ article {
 	}
 	p {
 		&:nth-of-type(1) {
-			color: var(--grayish-blue);
+			color: $grayish-blue;
 			padding: 4em 0;
 			letter-spacing: -0.13px;
 			line-height: 30px;
 			width: 445px;
 		}
 		&:nth-of-type(4) {
-			color: var(--grayish-blue);
+			color: $grayish-blue;
 			padding: 4em 0;
 			letter-spacing: -0.13px;
 			line-height: 30px;
@@ -98,7 +110,7 @@ article {
 		font-family: 'Fraunces', serif;
 		text-transform: uppercase;
 		text-decoration: none;
-		color: var(--dark-blue);
+		color: $dark-blue;
 	}
 }
 .info {
@@ -131,7 +143,7 @@ article {
 	padding: 9em 0;
 	h3 {
 		font-family: 'Fraunces', serif;
-		color: var(--grayish-white);
+		color: $grayish-white;
 		text-transform: uppercase;
 		letter-spacing: 5px;
 		font-size: 1.125em;
@@ -150,7 +162,7 @@ section {
 	text-align: center;
 	margin: 0 30px;
 	p {
-		color: var(--dark-grayish-blue);
+		color: $dark-grayish-blue;
 		letter-spacing: -0.13px;
 		margin: 4.5em auto;
 		line-height: 1.8em;
@@ -167,20 +179,20 @@ aside {
 	}
 }
 footer {
-	background-color: var(--dark-cyan-footer);
+	background-color: $dark-cyan-footer;
 	text-align: center;
 	img {
 		padding: 4em 1.5em;
 		&:hover {
-			fill: var(--white);
+			fill: $white;
 		}
 	}
 	a {
-		color: var(--dark-cyan);
+		color: $dark-cyan;
 		text-decoration: none;
 		transition: 0.5s;
 		&:hover {
-			color: var(--white);
+			color: $white;
 		}
 	}
 }

@@ -18,15 +18,15 @@ html {
 
 body {
   font-family: 'Barlow', sans-serif;
-  background-color: var(--bg-white-cream);
-  color: var(--dark-blue);
+  background-color: #fffbf5;
+  color: #23303e;
   font-size: 18px;
 }
 
 h1 {
   font-family: 'Fraunces', serif;
   font-size: 3.5em;
-  color: var(--white);
+  color: white;
   text-transform: uppercase;
   letter-spacing: 8.75px;
 }
@@ -48,7 +48,7 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: var(--white);
+  color: white;
   margin: 0 1.25em;
 }
 
@@ -59,8 +59,8 @@ nav img:last-of-type {
 .contact {
   font-family: 'Fraunces', serif;
   text-transform: uppercase;
-  color: var(--dark-blue);
-  background-color: var(--white);
+  color: #23303e;
+  background-color: white;
   padding: 1em 1.5em;
   margin: 0 0 0 1em;
   border-radius: 50px;
@@ -103,7 +103,7 @@ article {
 }
 
 .gallery p:nth-of-type(1) {
-  color: var(--grayish-blue);
+  color: #7f8294;
   padding: 4em 0;
   letter-spacing: -0.13px;
   line-height: 30px;
@@ -111,7 +111,7 @@ article {
 }
 
 .gallery p:nth-of-type(4) {
-  color: var(--grayish-blue);
+  color: #7f8294;
   padding: 4em 0;
   letter-spacing: -0.13px;
   line-height: 30px;
@@ -122,7 +122,7 @@ article {
   font-family: 'Fraunces', serif;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--dark-blue);
+  color: #23303e;
 }
 
 .info {
@@ -165,7 +165,7 @@ article {
 
 .feedback h3 {
   font-family: 'Fraunces', serif;
-  color: var(--grayish-white);
+  color: #a6a8ab;
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 1.125em;
@@ -193,7 +193,7 @@ section img {
 }
 
 .client p {
-  color: var(--dark-grayish-blue);
+  color: #5b636b;
   letter-spacing: -0.13px;
   margin: 4.5em auto;
   line-height: 1.8em;
@@ -218,7 +218,7 @@ aside img {
 }
 
 footer {
-  background-color: var(--dark-cyan-footer);
+  background-color: #8dd3c4;
   text-align: center;
 }
 
@@ -227,17 +227,17 @@ footer img {
 }
 
 footer img:hover {
-  fill: var(--white);
+  fill: white;
 }
 
 footer a {
-  color: var(--dark-cyan);
+  color: #458c7d;
   text-decoration: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 footer a:hover {
-  color: var(--white);
+  color: white;
 }
 /*# sourceMappingURL=main.css.map */
