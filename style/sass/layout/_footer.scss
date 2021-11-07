@@ -1,0 +1,18 @@
+footer {
+	background-color: $dark-cyan-footer;
+	text-align: center;
+	img {
+		padding: 4em 1.5em;
+		&:hover {
+			fill: $white;
+		}
+	}
+	a {
+		color: $dark-cyan;
+		text-decoration: none;
+		transition: 0.5s;
+		&:hover {
+			color: $white;
+		}
+	}
+}

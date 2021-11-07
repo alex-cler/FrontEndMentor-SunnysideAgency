@@ -1,3 +1,13 @@
+@import 'base/resets';
+@import 'base/typography';
+
+@import 'helpers/mixins';
+@import 'helpers/variables';
+
+@import 'layout/flex';
+@import 'layout/header';
+@import 'layout/footer';
+
 /* Smooth behavior */
 html {
 	scroll-behavior: smooth;
@@ -8,52 +18,6 @@ body {
 	background-color: $bg-white-cream;
 	color: $dark-blue;
 	font-size: 18px;
-}
-
-h1 {
-	font-family: 'Fraunces', serif;
-	font-size: 3.5em;
-	color: $white;
-	text-transform: uppercase;
-	letter-spacing: 8.75px;
-}
-
-/* NavBar display */
-nav {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	padding: 2.5em 2em;
-	a {
-		text-decoration: none;
-		color: $white;
-		margin: 0 1.25em;
-	}
-	img {
-		&:last-of-type {
-			display: none;
-		}
-	}
-}
-
-.contact {
-	font-family: 'Fraunces', serif;
-	text-transform: uppercase;
-	color: $dark-blue;
-	background-color: $white;
-	padding: 1em 1.5em;
-	margin: 0 0 0 1em;
-	border-radius: 50px;
-}
-
-header {
-	background: url("/assets/image-header.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	min-width: 100vw;
-	height: 95vh;
-	text-align: center;
 }
 
 li {
@@ -169,24 +133,5 @@ aside {
 	flex-flow: row wrap;
 	img {
 		width: 25vw;
-	}
-}
-
-footer {
-	background-color: $dark-cyan-footer;
-	text-align: center;
-	img {
-		padding: 4em 1.5em;
-		&:hover {
-			fill: $white;
-		}
-	}
-	a {
-		color: $dark-cyan;
-		text-decoration: none;
-		transition: 0.5s;
-		&:hover {
-			color: $white;
-		}
 	}
 }
