@@ -7,6 +7,7 @@
 
 @import 'layout/flex';
 @import 'layout/header';
+@import 'layout/gallery';
 @import 'layout/footer';
 
 /* Smooth behavior */
@@ -23,72 +24,6 @@ body {
 
 li {
 	display: inline;
-}
-
-article {
-	display: flex;
-	flex-flow: row wrap;
-}
-
-.gallery {
-	min-width: 400px;
-	width: 50vw;
-	height: 600px;
-	h2 {
-		font-family: 'Fraunces', serif;
-		font-size: 2.2em;
-		width: 445px;
-	}
-	p {
-		&:nth-of-type(1) {
-			color: $grayish-blue;
-			padding: 4em 0;
-			letter-spacing: -0.13px;
-			line-height: 30px;
-			width: 445px;
-		}
-		&:nth-of-type(4) {
-			color: $grayish-blue;
-			padding: 4em 0;
-			letter-spacing: -0.13px;
-			line-height: 30px;
-			width: 445px;
-		}
-	}
-	a {
-		font-family: $secondary-font;
-		text-transform: uppercase;
-		text-decoration: none;
-		color: $dark-blue;
-	}
-}
-
-.info {
-	margin: 6em;
-}
-
-.gallery.cherry {
-	h3 {
-		font-family: $secondary-font;
-		font-size: 1.5em;
-	}
-}
-
-.gallery.orange {
-	h3 {
-		font-family: $secondary-font;
-		font-size: 1.5em;
-	}
-}
-
-.cherry {
-	background-image: url("./assets/image-graphic-design.jpg");
-	text-align: center;
-}
-
-.orange {
-	background-image: url("./assets/image-photography.jpg");
-	text-align: center;
 }
 
 .feedback {

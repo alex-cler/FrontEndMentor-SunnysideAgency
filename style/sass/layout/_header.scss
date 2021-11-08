@@ -1,5 +1,5 @@
 h1 {
-	font-family: 'Fraunces', serif;
+	font-family: $secondary-font;
 	font-size: 3.5em;
 	color: $white;
 	text-transform: uppercase;
@@ -25,13 +25,18 @@ nav {
 }
 
 .contact {
-	font-family: 'Fraunces', serif;
+	font-family: $secondary-font;
 	text-transform: uppercase;
 	color: $dark-blue;
 	background-color: $white;
 	padding: 1em 1.5em;
 	margin: 0 0 0 1em;
 	border-radius: 50px;
+	transition: 0.5s;
+	&:hover {
+		color: $white;
+		background-color: $contact-bg-hover;
+	}
 }
 
 header {
@@ -45,5 +50,5 @@ header {
 }
 
 .arrow {
-    animation: upanddown 2.5s infinite;
+    animation: upanddown 2.25s infinite;
 }

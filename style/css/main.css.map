@@ -8,6 +8,7 @@
         "../sass/helpers/_mixins.scss",
         "../sass/helpers/_variables.scss",
         "../sass/layout/_header.scss",
+        "../sass/layout/_gallery.scss",
         "../sass/layout/_flex.scss",
         "../sass/layout/_footer.scss"
     ],
