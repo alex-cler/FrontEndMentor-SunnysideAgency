@@ -18,6 +18,14 @@
           box-sizing: border-box;
 }
 
+.feature__link {
+  text-transform: uppercase;
+}
+
+.feature__link {
+  text-decoration: none;
+}
+
 /* Colors */
 /* Fonts */
 /* Media query breakpoints */
@@ -125,19 +133,30 @@ main {
           flex-flow: row wrap;
 }
 
-.gallery {
+.feature__ {
   min-width: 400px;
   width: 50vw;
   height: 600px;
+  /* a {
+		font-family: $secondary-font;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: $dark-blue;
+        
+	} */
 }
 
-.gallery h2 {
+.feature__container {
+  width: 50vw;
+}
+
+.feature__heading {
   font-family: "Fraunces", sans-serif;
   font-size: 2.2em;
   width: 445px;
 }
 
-.gallery p:nth-of-type(1) {
+.feature__text {
   color: #7f8294;
   padding: 4em 0;
   letter-spacing: -0.13px;
@@ -145,15 +164,43 @@ main {
   width: 445px;
 }
 
-.gallery p:nth-of-type(4) {
-  color: #7f8294;
-  padding: 4em 0;
-  letter-spacing: -0.13px;
-  line-height: 30px;
-  width: 445px;
+.feature__link {
+  display: inline-block;
+  font-family: "Fraunces", sans-serif;
+  color: #5b636b;
+  position: relative;
+  line-height: 1.6;
+  /* Hover state */
 }
 
-.gallery .info {
+.feature__link::after {
+  content: '';
+  position: absolute;
+  left: -8px;
+  bottom: 0;
+  z-index: -1;
+  display: block;
+  width: calc(100% + 16px);
+  border-radius: 100px;
+  height: 10px;
+  opacity: 0.25;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.feature__link:hover::after {
+  opacity: 1;
+}
+
+.feature__link--yellow::after {
+  background-color: rgba(250, 212, 0, 0.25);
+}
+
+.feature__link--red::after {
+  background-color: rgba(254, 120, 103, 0.25);
+}
+
+.feature__ .info {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -169,48 +216,6 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.gallery .yellow a::before {
-  content: '';
-  position: absolute;
-  left: -8px;
-  bottom: 0;
-  z-index: 12;
-  display: block;
-  width: calc(100% + 16px);
-  border-radius: 100px;
-  height: 10px;
-  opacity: 0.2;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
-  background-color: rgba(250, 212, 0, 0.25);
-}
-
-.gallery:hover::after {
-  opacity: 1;
-}
-
-.gallery .red a::before {
-  content: '';
-  position: absolute;
-  width: 150px;
-  height: 10px;
-  background-color: rgba(254, 120, 103, 0.25);
-  border-radius: 50vw;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.gallery .red a::before:hover {
-  background-color: red;
-}
-
-.gallery a {
-  font-family: "Fraunces", sans-serif;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #23303e;
 }
 
 .gallery.cherry h3 {

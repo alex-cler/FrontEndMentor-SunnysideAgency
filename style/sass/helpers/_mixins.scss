@@ -9,3 +9,11 @@
   background-repeat: $repeat;
   @content;
 }
+
+%uppercase {
+    text-transform: uppercase;
+}
+
+%linkreset {
+    text-decoration: none;
+}
