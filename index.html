@@ -4,20 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- displays site properly based on user's device -->
+  <!-- Displays site properly based on user's device -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <!-- Style -->
   <link rel="stylesheet" href="./style/sass/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com"> 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <!-- Import Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icon -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
   <title>Frontend Mentor | Sunnyside agency landing page</title>
 </head>
 
 <body>
   <header>
     <nav>
-      <img src="./assets/logo.svg" alt="Logo Sunnyside agency">
+      <a href="index.html">
+        <img src="./assets/logo.svg" alt="Logo Sunnyside agency">
+      </a>
       <ul>
         <li><a href="#">About</a></li>
         <li><a href="#">Services</a></li>
@@ -25,38 +32,38 @@
         <li><a class="contact" href="#">Contact</a></li>
       </ul>
       <!-- Logo menu burger on mobile -->
-      <img src="./assets/icon-hamburger.svg" alt="Menu burger">
+      <button id="Menu" aria-expanded="false" aria-controls="menu" >
+        <img src="./assets/icon-hamburger.svg" alt="Menu burger">
+      </button>
     </nav>
     <h1>We are creatives</h1>
-    <img class="arrow" src="./assets/icon-arrow-down.svg" alt="White arrow-down icon">
+    <a href="#feature" aria-label="Arrow that allow you to scroll down to the feature content">
+      <img class="arrow" src="./assets/icon-arrow-down.svg" alt="White arrow-down icon">
+    </a>
   </header>
-  <main>
-    <div class="gallery">
-      <div class="info yellow">
-        <h2>Transform your brand</h2>
-        <p>We are a full-service creative agency specializing in helping brands grow fast.
-          Engage your clients through compelling visuals that do most of the marketing for you.</p>
-        <a href="#">Learn more</a>
-      </div>  
+  <main id="feature">
+    <div class="feature__container">
+      <h2 class="feature__heading">Transform your brand</h2>
+      <p class="feature__text">We are a full-service creative agency specializing in helping brands grow fast.
+        Engage your clients through compelling visuals that do most of the marketing for you.</p>
+      <a href="#" class="feature__link feature__link__yellow">Learn more</a>
     </div>
-    <img class="gallery" src="./assets/image-transform.jpg" alt="Egg with yellow background">
-    <img class="gallery" src="./assets/image-stand-out.jpg" alt="Glass with coral background">
-    <div class="gallery">
-      <div class="info red">
-        <h2>Stand out to the right audience</h2>
-        <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll
-          build and extend your brand in digital places.</p>
-        <a href="#">Learn more</a>
-      </div>
+    <img class="feature__image" src="./assets/image-transform.jpg" alt="Egg with a yellow background">
+    <img class="feature__image" src="./assets/image-stand-out.jpg" alt="Coral Glass with coral background">
+    <div class="feature__container">
+      <h2 class="feature__heading">Stand out to the right audience</h2>
+      <p class="feature__text">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll
+        build and extend your brand in digital places.</p>
+      <a href="#" class="feature__link feature__link__red">Learn more</a>
     </div>
-    <div class="gallery cherry">
-      <h3>Graphic design</h3>
-      <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential
+    <div class="feature__design">
+      <h3 class="heading">Graphic design</h3>
+      <p class="text">Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential
         clients’ attention.</p>
     </div>
-    <div class="gallery orange">
-      <h3>Photography</h3>
-      <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
+    <div class="feature__photography">
+      <h3 class="heading">Photography</h3>
+      <p class="text">Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
       </p>
     </div>
   </main>
@@ -98,17 +105,26 @@
       <li><a href="#">Services</a></li>
       <li><a href="#">Projects</a></li>
     </ul>
-    <ul>
-      <li><a href="#"><img src="./assets/icon-facebook.svg" alt="Facebook"></a></li>
-      <li><a href="#"><img src="./assets/icon-instagram.svg" alt="Instagram"></a></li>
-      <li><a href="#"><img src="./assets/icon-twitter.svg" alt="Tiwtter"></a></li>
-      <li><a href="#"><img src="./assets/icon-pinterest.svg" alt="Pinterest"></a></li>
-    </ul>
+    <div class="social">
+      <a href="#" aria-label="Facebook Social Logo">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="#" aria-label="Instagram Social Logo">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="#" aria-label="Twitter Social Logo">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="#" aria-label="Pinterest Social Logo">
+        <i class="fab fa-pinterest"></i>
+      </a>
+    </div>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="#">Alex</a>.
     </div>
   </footer>
+  <script src="/js/scroll.js"></script>
 </body>
 
 </html>
