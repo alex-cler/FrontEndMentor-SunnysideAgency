@@ -174,16 +174,21 @@ main {
 .gallery .yellow a::before {
   content: '';
   position: absolute;
-  width: 150px;
+  left: -8px;
+  bottom: 0;
+  z-index: 12;
+  display: block;
+  width: calc(100% + 16px);
+  border-radius: 100px;
   height: 10px;
+  opacity: 0.2;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
   background-color: rgba(250, 212, 0, 0.25);
-  border-radius: 50vw;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 
-.gallery .yellow a::before:hover {
-  background-color: red;
+.gallery:hover::after {
+  opacity: 1;
 }
 
 .gallery .red a::before {
