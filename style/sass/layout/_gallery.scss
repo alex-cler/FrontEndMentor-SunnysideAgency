@@ -9,11 +9,14 @@ main {
 	height: 600px;
 	&container {
 		width: 50vw;
+		text-align: left;
+    	padding: 13.33% 8%;
 	}
 	&heading {
 		font-family: $secondary-font;
 		font-size: 2.2em;
 		width: 445px;
+		color: $dark-navy-blue;
 	}
 	&text {
 		color: $grayish-blue;
@@ -25,7 +28,7 @@ main {
 	&link {
 		display: inline-block;
 		font-family: $secondary-font;
-		color: $dark-grayish-blue;
+		color: $dark-navy-blue;
 		position: relative;
 		line-height: 1.6;
 		@extend %uppercase;
@@ -80,7 +83,7 @@ main {
 .heading {
     font-family: $secondary-font;
     font-weight: $font-weight-bold;
-    font-size: 3rem;
+    font-size: 2.4rem;
     margin-bottom: 30px;
 }
 
@@ -90,53 +93,4 @@ main {
 	margin: 0 auto;
 	line-height: 27px;
 	font-weight: $font-weight-text;
-}
-    /* .info {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    } */
-
-	/* a {
-		font-family: $secondary-font;
-		text-transform: uppercase;
-		text-decoration: none;
-		color: $dark-blue;
-        
-	} */
-
-
-.gallery.cherry {
-	h3 {
-		font-family: $secondary-font;
-		font-size: 1.5em;
-	}
-}
-
-.gallery.orange {
-	h3 {
-		font-family: $secondary-font;
-		font-size: 1.5em;
-	}
-}
-
-.cherry {
-	background-image: url("/assets/image-graphic-design.jpg");
-	text-align: center;
-	p {
-		position: absolute;
-		top: 50px;
-	}
-}
-
-.orange {
-	background-image: url("/assets/image-photography.jpg");
-	text-align: center;
-	p {
-		position: absolute;
-		top: 50px;
-	}
 }
