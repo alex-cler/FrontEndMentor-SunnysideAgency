@@ -1,8 +1,6 @@
 /* Colors */
-$red-hover: hsl(7, 99%, 70%);
-$red: rgba($red-hover, 0.25);
-$yellow-hover: hsl(51, 100%, 49%);
-$yellow: rgba($yellow-hover, 0.25);
+$red: hsl(7, 99%, 70%);
+$yellow: hsl(51, 100%, 49%);
 $dark-cyan: hsl(167, 34%, 41%);
 $dark-blue : hsl(198, 62%, 26%);
 $dark-cyan-footer : hsl(167, 44%, 69%);
@@ -17,6 +15,9 @@ $contact-bg-hover: rgba($white, 0.2537);
 /* Fonts */
 $primary-font: 'Barlow', sans-serif;
 $secondary-font: 'Fraunces', sans-serif;
+$font-weight-text: 600;
+$font-weight-text: 700;
+$font-weight-bold: 900;
 
 /* Media query breakpoints */
 $breakpoints: (

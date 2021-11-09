@@ -5,7 +5,7 @@
 @import 'helpers/variables';
 @import 'helpers/animations';
 
-@import 'layout/flex';
+@import 'layout/client';
 @import 'layout/header';
 @import 'layout/gallery';
 @import 'layout/footer';
@@ -24,44 +24,6 @@ body {
 
 li {
 	display: inline;
-}
-
-.feedback {
-	display: flex;
-	flex-flow: column wrap;
-	align-items: center;
-	padding: 9em 0;
-	h3 {
-		font-family: $secondary-font;
-		color: $grayish-white;
-		text-transform: uppercase;
-		letter-spacing: 5px;
-		font-size: 1.125em;
-		padding-bottom: 4.5em;
-	}
-}
-
-section {
-	display: flex;
-	flex-flow: row wrap;
-	img {
-		width: 72px;
-	}
-}
-
-.client {
-	width: 350px;
-	text-align: center;
-	margin: 0 30px;
-	p {
-		color: $dark-grayish-blue;
-		letter-spacing: -0.13px;
-		margin: 4.5em auto;
-		line-height: 1.8em;
-	}
-	img {
-		border-radius: 100%;
-	}
 }
 
 aside {

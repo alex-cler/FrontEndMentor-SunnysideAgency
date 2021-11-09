@@ -1,0 +1,47 @@
+.feedback {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	padding: 9em 0;
+	h3 {
+		font-family: $secondary-font;
+		color: $grayish-white;
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		font-size: 1.125em;
+		padding-bottom: 4.5em;
+	}
+}
+
+.client__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+}
+
+.client {
+	width: 350px;
+	text-align: center;
+	&__image {
+        width: 70px;
+		border-radius: 100%;
+	}
+    &__feedback {
+        max-width: 350px;
+        color: $dark-grayish-blue;
+        margin: 30px auto;
+        /* Accurate design :) */
+        letter-spacing: -0.13px;
+        line-height: 1.8em;
+    }
+    &__name {
+        font-family: $secondary-font;
+        font-weight: $font-weight-bold;
+        color: $dark-blue;
+        margin-bottom: 10px;
+    }
+    &__job {
+        font-size: 0.8em;
+        color: $grayish-blue;
+    }
+}

@@ -42,7 +42,7 @@ main {
 		  border-radius: 100px;
 		  height: 10px;
 		  opacity: 0.25;
-		  transition: opacity 0.5s;
+		  transition: 0.5s;
 		}
 		/* Hover state */
 		&:hover::after {

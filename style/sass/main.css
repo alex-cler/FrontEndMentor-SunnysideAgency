@@ -58,6 +58,69 @@
   }
 }
 
+.feedback {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 9em 0;
+}
+
+.feedback h3 {
+  font-family: "Fraunces", sans-serif;
+  color: #a6a8ab;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 1.125em;
+  padding-bottom: 4.5em;
+}
+
+.client__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+}
+
+.client {
+  width: 350px;
+  text-align: center;
+}
+
+.client__image {
+  width: 70px;
+  border-radius: 100%;
+}
+
+.client__feedback {
+  max-width: 350px;
+  color: #5b636b;
+  margin: 30px auto;
+  /* Accurate design :) */
+  letter-spacing: -0.13px;
+  line-height: 1.8em;
+}
+
+.client__name {
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  color: #23303e;
+  margin-bottom: 10px;
+}
+
+.client__job {
+  font-size: 0.8em;
+  color: #7f8294;
+}
+
 h1 {
   font-family: "Fraunces", sans-serif;
   font-size: 3.5em;
@@ -184,8 +247,8 @@ main {
   border-radius: 100px;
   height: 10px;
   opacity: 0.25;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .feature__link:hover::after {
@@ -193,11 +256,11 @@ main {
 }
 
 .feature__link--yellow::after {
-  background-color: rgba(250, 212, 0, 0.25);
+  background-color: #fad400;
 }
 
 .feature__link--red::after {
-  background-color: rgba(254, 120, 103, 0.25);
+  background-color: #fe7867;
 }
 
 .feature__ .info {
@@ -287,60 +350,6 @@ body {
 
 li {
   display: inline;
-}
-
-.feedback {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 9em 0;
-}
-
-.feedback h3 {
-  font-family: "Fraunces", sans-serif;
-  color: #a6a8ab;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  font-size: 1.125em;
-  padding-bottom: 4.5em;
-}
-
-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-}
-
-section img {
-  width: 72px;
-}
-
-.client {
-  width: 350px;
-  text-align: center;
-  margin: 0 30px;
-}
-
-.client p {
-  color: #5b636b;
-  letter-spacing: -0.13px;
-  margin: 4.5em auto;
-  line-height: 1.8em;
-}
-
-.client img {
-  border-radius: 100%;
 }
 
 aside {
