@@ -15,7 +15,7 @@
 
 .client__container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     column-gap: 30px;
 }
 
@@ -42,6 +42,6 @@
     }
     &__job {
         font-size: 0.8em;
-        color: $grayish-blue;
+    color: $grayish-blue;
     }
 }

@@ -1,17 +1,39 @@
-footer {
+.footer {
 	background-color: $cyan-footer;
 	text-align: center;
+	&__logo {
+		margin-bottom: 30px;
+	}
 	img {
 		padding: 4em 1.5em;
 		&:hover {
 			fill: $white;
 		}
 	}
-	a {
+	&__list {
+		margin-bottom: 60px;
+	}
+	&__list--link {
+		color: $dark-cyan;
+		text-decoration: none;
+		padding: 1em;
+		transition: 0.5s;
+		&:hover {
+			color: $white;
+		}
+	}
+	&__FEM {
+		font-size: 0.8rem;
+	}
+}
+
+.social {
+	margin-bottom: 60px;
+	&--link {
+		padding: 1em;
 		color: $dark-cyan;
 		text-decoration: none;
 		transition: 0.5s;
-        padding: 0 1em;
 		&:hover {
 			color: $white;
 		}
