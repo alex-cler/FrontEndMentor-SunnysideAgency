@@ -5,10 +5,10 @@
 	padding: 9em 0;
 	h3 {
 		font-family: $secondary-font;
+        font-size: $font-heading-client;
 		color: $grayish-white;
 		text-transform: uppercase;
 		letter-spacing: 5px;
-		font-size: 1.125em;
 		padding-bottom: 4.5em;
 	}
 }
@@ -27,21 +27,23 @@
 		border-radius: 100%;
 	}
     &__feedback {
+        font-size: $font-text;
         max-width: 350px;
         color: $dark-grayish-blue;
-        margin: 30px auto;
+        margin: 30px auto 75px auto;
         /* Accurate design :) */
         letter-spacing: -0.13px;
         line-height: 1.8em;
     }
     &__name {
         font-family: $secondary-font;
+        font-size: $font-text;
         font-weight: $font-weight-bold;
-        color: $dark-blue;
+        color: $dark-navy-blue;
         margin-bottom: 10px;
     }
     &__job {
-        font-size: 0.8em;
-    color: $grayish-blue;
+        font-size: $font-client-job;
+        color: $grayish-blue;
     }
 }

@@ -18,6 +18,11 @@
           box-sizing: border-box;
 }
 
+html {
+  /* 62.5% to set 1rem to 10px */
+  font-size: 62.5%;
+}
+
 .feature__link {
   text-transform: uppercase;
 }
@@ -74,10 +79,10 @@
 
 .feedback h3 {
   font-family: "Fraunces", sans-serif;
+  font-size: 2rem;
   color: #a6a8ab;
   text-transform: uppercase;
   letter-spacing: 5px;
-  font-size: 1.125em;
   padding-bottom: 4.5em;
 }
 
@@ -101,9 +106,10 @@
 }
 
 .client__feedback {
+  font-size: 1.8rem;
   max-width: 350px;
   color: #5b636b;
-  margin: 30px auto;
+  margin: 30px auto 75px auto;
   /* Accurate design :) */
   letter-spacing: -0.13px;
   line-height: 1.8em;
@@ -111,19 +117,20 @@
 
 .client__name {
   font-family: "Fraunces", sans-serif;
+  font-size: 1.8rem;
   font-weight: 900;
-  color: #19536b;
+  color: #24303d;
   margin-bottom: 10px;
 }
 
 .client__job {
-  font-size: 0.8em;
+  font-size: 1.4rem;
   color: #7f8294;
 }
 
 h1 {
   font-family: "Fraunces", sans-serif;
-  font-size: 3.5em;
+  font-size: 5.6rem;
   color: white;
   text-transform: uppercase;
   letter-spacing: 8.75px;
@@ -145,6 +152,7 @@ nav {
 }
 
 nav a {
+  font-size: 1.8rem;
   text-decoration: none;
   color: white;
   margin: 0 1.25em;
@@ -156,6 +164,7 @@ nav img:last-of-type {
 
 .contact {
   font-family: "Fraunces", sans-serif;
+  font-size: 1.5rem;
   text-transform: uppercase;
   color: #19536b;
   background-color: white;
@@ -210,12 +219,13 @@ main {
 
 .feature__heading {
   font-family: "Fraunces", sans-serif;
-  font-size: 2.2em;
+  font-size: 4rem;
   width: 445px;
   color: #24303d;
 }
 
 .feature__text {
+  font-size: 1.8rem;
   color: #7f8294;
   padding: 4em 0;
   letter-spacing: -0.13px;
@@ -224,8 +234,9 @@ main {
 }
 
 .feature__link {
-  display: inline-block;
   font-family: "Fraunces", sans-serif;
+  font-size: 1.8rem;
+  display: inline-block;
   color: #24303d;
   position: relative;
   line-height: 1.6;
@@ -281,17 +292,19 @@ main {
 
 .heading {
   font-family: "Fraunces", sans-serif;
+  font-size: 2.8rem;
   font-weight: 900;
   font-size: 2.4rem;
   margin-bottom: 30px;
 }
 
 .text {
-  max-width: 380px;
+  max-width: 350px;
   max-height: 180px;
+  font-size: 1.6rem;
+  font-weight: 700;
   margin: 0 auto;
   line-height: 27px;
-  font-weight: 700;
 }
 
 .footer {
@@ -300,7 +313,7 @@ main {
 }
 
 .footer__logo {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .footer img {
@@ -316,6 +329,7 @@ main {
 }
 
 .footer__list--link {
+  font-size: 1.8rem;
   color: #2d7668;
   text-decoration: none;
   padding: 1em;
@@ -328,7 +342,11 @@ main {
 }
 
 .footer__FEM {
-  font-size: 0.8rem;
+  font-size: 1.75rem;
+}
+
+.footer__FEM a {
+  color: white;
 }
 
 .social {
@@ -336,27 +354,22 @@ main {
 }
 
 .social--link {
-  padding: 1em;
+  padding: 0.75em;
   color: #2d7668;
   text-decoration: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  font-size: 2rem;
 }
 
 .social--link:hover {
   color: white;
 }
 
-/* Smooth behavior */
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: "Barlow", sans-serif;
   background-color: #fffbf5;
   color: #19536b;
-  font-size: 18px;
 }
 
 li {

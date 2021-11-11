@@ -10,16 +10,10 @@
 @import 'layout/gallery';
 @import 'layout/footer';
 
-/* Smooth behavior */
-html {
-	scroll-behavior: smooth;
-}
-
 body {
 	font-family: $primary-font;
 	background-color: $bg-white-cream;
 	color: $dark-blue;
-	font-size: 18px;
 }
 
 li {

@@ -1,6 +1,6 @@
 h1 {
 	font-family: $secondary-font;
-	font-size: 3.5em;
+	font-size: $font-title-header;
 	color: $white;
 	text-transform: uppercase;
 	letter-spacing: 8.75px;
@@ -13,6 +13,7 @@ nav {
 	justify-content: space-between;
 	padding: 2.5em 2em;
 	a {
+		font-size: $font-text;
 		text-decoration: none;
 		color: $white;
 		margin: 0 1.25em;
@@ -26,6 +27,7 @@ nav {
 
 .contact {
 	font-family: $secondary-font;
+	font-size: $font-link;
 	text-transform: uppercase;
 	color: $dark-blue;
 	background-color: $white;
