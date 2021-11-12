@@ -1,31 +1,24 @@
-let arrowBtn = $('.arrow')
-let link = $('a[href="#"]:not(".arrow")')
+$(document).ready(function () {
+  // Add smooth scrolling to all links
+  $("a").on('click', function (event) {
 
-// event binding
-arrowBtn.on('click', function(e) {
-  // send event object to the function
-  scrollToFeatureSection(e)
-})
-link.on('click', function(e) {
-  // send event object to the function
-  scrollToTop(e)
-})
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
 
+          // Store hash
+          var hash = this.hash;
 
-// smooth scrolling
-function scrollToTop(e) {
-  // prevent default action of <a>
-  e.preventDefault()
-  // move to top
-  $('html, body').stop().animate({scrollTop: 0}, 800)
-}
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (1500) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+              scrollTop: $(hash).offset().top
+          }, 1500, function () {
 
-
-function scrollToFeatureSection(e) {
-  // prevent default action of <a>
-  e.preventDefault()
-  // get position of the feature section 
-  let target = document.getElementById('feature').offsetTop
-  // move to the position
-  $('html, body').stop().animate({scrollTop: target}, 800)
-}
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+          });
+      } // End if
+  });
+});
