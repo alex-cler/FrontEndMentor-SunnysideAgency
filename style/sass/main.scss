@@ -24,16 +24,6 @@ aside {
 	display: flex;
 	flex-flow: row wrap;
 	img {
-		width: 25vw;
-	}
-}
-
-@media screen and (max-width: 481px) {
-	aside img {
-		width: 50%;
-	}
-
-	.gallery {
-		width: 100%;
+			width: 25vw;
 	}
 }

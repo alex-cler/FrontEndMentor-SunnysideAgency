@@ -2,10 +2,10 @@
 	background-color: $cyan-footer;
 	text-align: center;
 	&__logo {
-		margin-bottom: 40px;
+		margin-bottom: 20px;
 	}
 	img {
-		padding: 4em 1.5em;
+		margin: 6em 1.5em 2.5em 1.5em;
 		&:hover {
 			fill: $white;
 		}
@@ -17,7 +17,7 @@
 		font-size: $font-text;
 		color: $dark-cyan;
 		text-decoration: none;
-		padding: 1em;
+		margin: 0 28px;
 		transition: 0.5s;
 		&:hover {
 			color: $white;

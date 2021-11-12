@@ -11,9 +11,20 @@
 }
 
 /* Mixins to manage responsiveness */
-@mixin breakpoint($breakpoint) {
+/* @mixin breakpoint($breakpoint) {
   @media (max-width: map-get($breakpoints, $breakpoint)) {
       @content;
+  }
+} */
+@mixin mediaQuery-pc {
+  @media screen and (max-width: 1025px) {
+    @content;
+  }
+}
+
+@mixin mediaQuery-phone {
+  @media screen and (max-width: 420px) {
+    @content;
   }
 }
 

@@ -24,6 +24,11 @@ html {
 }
 
 /* Mixins to manage responsiveness */
+/* @mixin breakpoint($breakpoint) {
+  @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+  }
+} */
 .feature__link {
   text-transform: uppercase;
 }
@@ -34,7 +39,6 @@ html {
 
 /* Colors */
 /* Fonts */
-/* Media query breakpoints */
 @-webkit-keyframes upanddown {
   0% {
     -webkit-transform: translateY(0px);
@@ -135,10 +139,19 @@ h1 {
   color: white;
   text-transform: uppercase;
   letter-spacing: 8.75px;
+  margin-top: 100px;
+}
+
+@media screen and (max-width: 420px) {
+  h1 {
+    font-size: 4rem;
+    color: red;
+  }
 }
 
 /* NavBar display */
 nav {
+  width: calc(100vw - (96px));
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -149,18 +162,26 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 2.5em 2em;
+  padding-top: 60px;
+}
+
+@media screen and (max-width: 420px) {
+  nav li {
+    display: none;
+  }
 }
 
 nav a {
   font-size: 1.8rem;
   text-decoration: none;
   color: white;
-  margin: 0 1.25em;
+  margin-left: 50px;
 }
 
-nav img:last-of-type {
-  display: none;
+@media screen and (max-width: 1025px) {
+  nav button {
+    display: none;
+  }
 }
 
 .contact {
@@ -170,7 +191,6 @@ nav img:last-of-type {
   color: #19536b;
   background-color: white;
   padding: 1em 1.5em;
-  margin: 0 0 0 1em;
   border-radius: 50px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -187,13 +207,18 @@ header {
   background-size: cover;
   background-position: center;
   min-width: 100vw;
-  height: 95vh;
+  height: 100vh;
   text-align: center;
 }
 
 .arrow {
   -webkit-animation: upanddown 2.25s infinite;
           animation: upanddown 2.25s infinite;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
 main {
@@ -207,7 +232,6 @@ main {
 }
 
 .feature__ {
-  min-width: 400px;
   width: 50vw;
   height: 600px;
 }
@@ -215,7 +239,19 @@ main {
 .feature__container {
   width: 50vw;
   text-align: left;
-  padding: 13.33% 8%;
+  padding: 12.5% 8%;
+}
+
+@media screen and (max-width: 420px) {
+  .feature__container {
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .feature__image {
+    width: 100vw;
+  }
 }
 
 .feature__heading {
@@ -314,11 +350,11 @@ main {
 }
 
 .footer__logo {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .footer img {
-  padding: 4em 1.5em;
+  margin: 6em 1.5em 2.5em 1.5em;
 }
 
 .footer img:hover {
@@ -333,7 +369,7 @@ main {
   font-size: 1.8rem;
   color: #2d7668;
   text-decoration: none;
-  padding: 1em;
+  margin: 0 28px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -389,14 +425,5 @@ aside {
 
 aside img {
   width: 25vw;
-}
-
-@media screen and (max-width: 481px) {
-  aside img {
-    width: 50%;
-  }
-  .gallery {
-    width: 100%;
-  }
 }
 /*# sourceMappingURL=main.css.map */
