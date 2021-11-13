@@ -10,7 +10,7 @@ main {
 		width: 50vw;
 		text-align: left;
     	padding: 12.5% 8%;
-		@include mediaQuery-phone {
+		@media screen and (max-width: 480px) {
 			width: 100vw;
 		}
 	}
@@ -78,6 +78,9 @@ main {
 		@include background {
 		background-image: url('/assets/image-graphic-design.jpg');
 		}
+		@media screen and (max-width: 480px) {
+			width: 100vw;
+		}
 	}
 	&photography {
 		padding: 400px 30px 50px;
@@ -85,6 +88,9 @@ main {
 		color: $dark-blue;
 		@include background {
 		background-image: url('/assets/image-photography.jpg');
+		}
+		@media screen and (max-width: 480px) {
+			width: 100vw;
 		}
 	}
 }

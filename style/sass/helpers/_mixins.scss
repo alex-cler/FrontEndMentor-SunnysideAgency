@@ -17,13 +17,13 @@
   }
 } */
 @mixin mediaQuery-pc {
-  @media screen and (max-width: 1025px) {
+  @media screen and (min-width: $width-pc) {
     @content;
   }
 }
 
 @mixin mediaQuery-phone {
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: $width-phone) {
     @content;
   }
 }

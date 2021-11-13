@@ -1,4 +1,4 @@
-@import 'base/resets';
+/* @import 'base/resets';
 @import 'base/typography';
 
 @import 'helpers/mixins';
@@ -9,9 +9,10 @@
 @import 'layout/header';
 @import 'layout/gallery';
 @import 'layout/footer';
-
-body {
+ */
+/* body {
 	font-family: $primary-font;
+	font-size: $font-text;
 	background-color: $bg-white-cream;
 	color: $dark-blue;
 }
@@ -24,6 +25,626 @@ aside {
 	display: flex;
 	flex-flow: row wrap;
 	img {
+		@media screen and (min-width: 760px) {
 			width: 25vw;
+		}
+		@media screen and (max-width: 420px) {
+			width: 50vw;
+		}
 	}
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap');
+@import 'base/resets';
+
+/* ---- color ---- */
+// learn more underline
+$primary-red: hsl(7, 99%, 70%);
+$primary-yellow: hsl(51, 100%, 49%);
+// navigation bg
+$primary-white: #fff;
+// graphic design text
+$primary-desaturated-cyan: hsl(167, 40%, 24%);
+// photography text
+$primary-dark-blue: hsl(198, 62%, 26%);
+// footer
+$primary-dark-moderate-cyan-keep: hsl(168, 34%, 41%);
+$primary-dark-moderate-cyan: #90d4c5;
+$primary-dark-green: #2a7261;
+// others
+$very-dark-desaturated-blue: hsl(212, 27%, 19%);
+$very-dark-grayish-blue: hsl(213, 9%, 39%);
+$dark-grayish-blue: hsl(232, 10%, 55%);
+$grayish-blue: hsl(210, 4%, 67%);
+$white: hsl(0, 0%, 100%);
+$black: #000;
+$white-opacity: rgba(255, 255, 255, 30%);
+
+/* ---- font ---- */
+$primary-font-size: 1.8rem;
+$heading-line-height: 1.2;
+$text-line-height: 1.7;
+$primary-font-color: $dark-grayish-blue;
+$primary-font-family: 'Barlow', sans-serif;
+$secondary-font-family: 'Fraunces', serif;
+$primary-font-weight: 600;
+$secondary-font-weight-normal: 700;
+$secondary-font-weight-bold: 900;
+
+/* ---- breakpoint ---- */
+$width-xs-sm: 375px;
+$width-pc: 760px;
+
+/* ---- @mixin ---- */
+
+// background
+@mixin background(
+  $size: cover,
+  $position-x: center,
+  $position-y: center,
+  $repeat: no-repeat
+) {
+  background-size: $size;
+  background-position: $position-x $position-y;
+  background-repeat: $repeat;
+  @content;
+}
+
+// media query
+@mixin mediaQuery-xs-sm {
+  @media screen and (max-width: $width-xs-sm) {
+    @content;
+  }
+}
+
+@mixin mediaQuery-pc {
+  @media screen and (min-width: $width-pc) {
+    @content;
+  }
+}
+
+/* ---- extend ---- */
+%margin-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+%toUpperCase {
+  text-transform: uppercase;
+}
+
+/* ---- base ---- */
+html {
+  font-size: 62.5%;
+  // scroll-behavior: smooth;
+}
+body {
+  font-size: $primary-font-size;
+  font-family: $primary-font-family;
+  font-weight: $primary-font-weight;
+  color: $primary-font-color;
+  line-height: $text-line-height;
+}
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ---- common ---- */
+.hide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  z-index: -9999;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* ---- header ---- */
+.header {
+  height: 100vh;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  @include background {
+    background-image: url('/assets/image-header.jpgS');
+  }
+  @include mediaQuery-pc {
+    background-image: url('/assets/image-header.jpg');
+  }
+}
+
+.header {
+  .global-nav {
+    margin-bottom: 130px;
+    @include mediaQuery-pc {
+      margin-bottom: 100px;
+    }
+  }
+  .slogan {
+    font-family: $secondary-font-family;
+    font-weight: $secondary-font-weight-bold;
+    font-size: 4.4rem;
+    color: $white;
+    line-height: $heading-line-height;
+    letter-spacing: 5px;
+    @extend %toUpperCase;
+
+    @include mediaQuery-xs-sm {
+      font-size: 2.8rem;
+    }
+
+    @include mediaQuery-pc {
+      font-size: 5rem;
+    }
+  }
+  .arrow {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100px;
+    height: 250px;
+    transform: translateX(-50%);
+    .pic {
+      -webkit-animation-name: down;
+      animation-name: down;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-direction: alternate;
+      animation-direction: alternate;
+    }
+  }
+}
+
+// animation for arrow
+@-webkit-keyframes down {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(106px);
+  }
+}
+
+@keyframes down {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(106px);
+  }
+}
+
+// component-global-nav
+.global-nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ---- if JavaScript is detected ---- */
+
+.js .global-nav__ {
+  // create the menu button and show out
+  &menu-btn {
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    order: 1;
+
+    @include mediaQuery-pc {
+      display: none;
+    }
+  }
+  // hide the menu
+  &menu {
+    display: none;
+
+    @include mediaQuery-pc {
+      display: flex;
+      padding: 0;
+      position: static;
+      width: auto;
+      background-color: transparent;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+    }
+    // create the triangle
+    &::after {
+      position: absolute;
+      content: '';
+      top: -19px;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 0 20px 20px;
+      border-color: transparent transparent #ffffff transparent;
+
+      @include mediaQuery-pc {
+        display: none;
+      }
+    }
+
+    // for the toggleMenu()
+    &--active {
+      display: block;
+    }
+  }
+}
+
+/* ---- if JavaScript is not detected ---- */
+.global-nav__ {
+  // hide the btn
+  &menu-btn {
+    display: none;
+  }
+
+  // show the menu
+  &menu {
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    padding: 20px 0;
+    background-color: $primary-white;
+
+    // reposition the menu
+    @include mediaQuery-pc {
+      display: flex;
+      padding: 0;
+      position: static;
+      width: auto;
+      background-color: transparent;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+    }
+  }
+
+  &item {
+    margin: 15px 0;
+
+    @include mediaQuery-pc {
+      margin: 0 10px;
+    }
+  }
+  &link {
+    display: inline-block;
+    color: $dark-grayish-blue;
+    padding: 15px 30px;
+    border-radius: 100px;
+    @include mediaQuery-pc {
+      color: $white;
+      transition: background-color 0.5s, color 0.5s;
+    }
+
+    &--current {
+      font-family: $secondary-font-family;
+      font-weight: $secondary-font-weight-normal;
+      background-color: $primary-yellow;
+      color: $black;
+      @extend %toUpperCase;
+
+      @include mediaQuery-pc {
+        color: $very-dark-desaturated-blue;
+        background-color: $white;
+      }
+    }
+    @include mediaQuery-pc {
+      &:hover {
+        background-color: $white-opacity;
+        color: $white;
+      }
+    }
+  }
+}
+
+/* ---- feature ---- */
+
+@include mediaQuery-pc {
+  .feature-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &:nth-of-type(odd) {
+      .feature-card__ {
+        &content {
+          order: -1;
+        }
+      }
+    }
+  }
+}
+
+// component-feature-card
+.feature-card__ {
+  &content {
+    text-align: center;
+    padding: 13.3333333333% 8%;
+    // padding: 50px 30px;
+
+    @include mediaQuery-pc {
+      text-align: left;
+      place-self: center;
+      padding: 50px 30px;
+      max-height: 500px;
+      overflow: auto;
+      &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: transparent;
+      }
+
+      &::-webkit-scrollbar {
+        width: 8px;
+        background-color: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: #555;
+      }
+    }
+  }
+  &pic {
+    width: 100%;
+
+    @include mediaQuery-pc {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: contain;
+      object-fit: cover;
+    }
+  }
+  &heading {
+    font-family: $secondary-font-family;
+    font-weight: $secondary-font-weight-bold;
+    font-size: 3.2rem;
+    color: $very-dark-desaturated-blue;
+    line-height: $heading-line-height;
+    margin-bottom: 9.52380952381%;
+    // margin-bottom: 30px;
+  }
+  &txt {
+    margin-bottom: 9.52380952381%;
+    // margin-bottom: 30px;
+
+    @include mediaQuery-pc {
+      max-width: 460px;
+    }
+  }
+  &link {
+    display: inline-block;
+    font-family: $secondary-font-family;
+    font-weight: $secondary-font-weight-bold;
+    color: $very-dark-desaturated-blue;
+    position: relative;
+    line-height: 1.6;
+    @extend %toUpperCase;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: -8px;
+      bottom: 0;
+      z-index: -1;
+      display: block;
+      width: calc(100% + 16px);
+      border-radius: 100px;
+      height: 10px;
+      opacity: 0.2;
+      transition: opacity 0.5s;
+    }
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+  &link--yellow {
+    &::after {
+      background-color: $primary-yellow;
+    }
+  }
+  &link--red {
+    &::after {
+      background-color: $primary-red;
+    }
+  }
+}
+
+// component-service-card
+
+@include mediaQuery-pc {
+  .service-card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.service-card {
+  padding: 400px 30px 50px;
+  text-align: center;
+
+  .heading {
+    font-family: $secondary-font-family;
+    font-weight: $secondary-font-weight-bold;
+    font-size: 3rem;
+    margin-bottom: 30px;
+  }
+  .txt {
+    @extend %margin-center;
+    max-width: 380px;
+    max-height: 180px;
+    overflow: auto;
+
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+      width: 8px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: #555;
+    }
+  }
+
+  &--design {
+    color: $primary-desaturated-cyan;
+    @include background {
+      background-image: url('/assets/image-graphic-design.jpg');
+    }
+  }
+  &--photography {
+    @include background {
+      background-image: url('/assets/image-photography.jpg');
+    }
+    color: $primary-dark-blue;
+  }
+}
+
+/* ---- testimonials ---- */
+
+.testimonials {
+  // padding: 13.3333333333% 10.6666666667%;
+  padding: 50px 40px;
+  @include mediaQuery-pc {
+    padding: 140px 80px;
+  }
+  .heading {
+    font-family: $secondary-font-family;
+    font-weight: $secondary-font-weight-bold;
+    text-align: center;
+    color: $grayish-blue;
+    letter-spacing: 4px;
+    font-size: 1.6rem;
+    @extend %toUpperCase;
+  }
+}
+
+// component-client-card
+
+@include mediaQuery-pc {
+  .client-card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+  }
+}
+
+.client-card {
+  text-align: center;
+  padding-top: 50px;
+
+  @include mediaQuery-pc {
+    padding-top: 70px;
+  }
+}
+
+.client-card__ {
+  &avatar {
+    width: 70px;
+    border-radius: 50%;
+  }
+  &txt {
+    max-width: 350px;
+    color: $very-dark-grayish-blue;
+    margin: 30px auto;
+    @include mediaQuery-pc {
+      margin: 50px auto;
+    }
+  }
+  &name {
+    font-family: $secondary-font-family;
+    font-weight: $secondary-font-weight-bold;
+    color: $very-dark-desaturated-blue;
+    margin-bottom: 10px;
+  }
+  &occupation {
+    font-size: 0.8em;
+    color: $grayish-blue;
+  }
+}
+
+/* ---- gallery ---- */
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @include mediaQuery-pc {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/* ---- footer ---- */
+.footer {
+  padding: 60px 40px;
+  background-color: $primary-dark-moderate-cyan;
+  text-align: center;
+  .logo {
+    margin-bottom: 30px;
+    @include mediaQuery-pc {
+      width: 150px;
+    }
+  }
+  .local-nav {
+    margin-bottom: 60px;
+  }
+}
+
+// component-local-nav
+.local-nav__ {
+  &menu {
+    display: flex;
+    justify-content: center;
+  }
+  &item {
+    margin: 0 30px;
+    @include mediaQuery-xs-sm {
+      margin: 0 10px;
+    }
+  }
+  &link {
+    color: $primary-dark-moderate-cyan-keep;
+    transition: color 0.5s;
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+// social
+.social__ {
+  // clear white space
+  &link {
+    display: inline-block;
+    margin: 0 15px;
+    color: #2c7566;
+    font-size: 1.3em;
+    transition: color 0.5s;
+
+    @include mediaQuery-xs-sm {
+      font-size: 1em;
+    }
+
+    &:hover {
+      color: $white;
+    }
+  }
 }
