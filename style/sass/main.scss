@@ -61,7 +61,7 @@ $white: hsl(0, 0%, 100%);
 $black: #000;
 $white-opacity: rgba(255, 255, 255, 30%);
 
-/* ---- font ---- */
+/* --- Font --- */
 $primary-font-size: 1.8rem;
 $heading-line-height: 1.2;
 $text-line-height: 1.7;
@@ -73,12 +73,11 @@ $secondary-font-weight-normal: 700;
 $secondary-font-weight-bold: 900;
 
 /* ---- breakpoint ---- */
-$width-xs-sm: 375px;
+$width-phone: 420px;
 $width-pc: 760px;
 
-/* ---- @mixin ---- */
 
-// background
+// Background setting
 @mixin background(
   $size: cover,
   $position-x: center,
@@ -91,14 +90,14 @@ $width-pc: 760px;
   @content;
 }
 
-// media query
-@mixin mediaQuery-xs-sm {
-  @media screen and (max-width: $width-xs-sm) {
+// Different breakpoints format
+@mixin breakpoint-phone {
+  @media screen and (max-width: $width-phone) {
     @content;
   }
 }
 
-@mixin mediaQuery-pc {
+@mixin breakpoint-pc {
   @media screen and (min-width: $width-pc) {
     @content;
   }
@@ -154,9 +153,9 @@ a {
   text-align: center;
   position: relative;
   @include background {
-    background-image: url('/assets/image-header.jpgS');
+    background-image: url('/assets/image-header.jpg');
   }
-  @include mediaQuery-pc {
+  @include breakpoint-pc {
     background-image: url('/assets/image-header.jpg');
   }
 }
@@ -164,7 +163,7 @@ a {
 .header {
   .global-nav {
     margin-bottom: 130px;
-    @include mediaQuery-pc {
+    @include breakpoint-pc {
       margin-bottom: 100px;
     }
   }
@@ -177,11 +176,11 @@ a {
     letter-spacing: 5px;
     @extend %toUpperCase;
 
-    @include mediaQuery-xs-sm {
+    @include breakpoint-phone {
       font-size: 2.8rem;
     }
 
-    @include mediaQuery-pc {
+    @include breakpoint-pc {
       font-size: 5rem;
     }
   }
@@ -244,7 +243,7 @@ a {
     padding: 0;
     order: 1;
 
-    @include mediaQuery-pc {
+    @include breakpoint-pc {
       display: none;
     }
   }
@@ -252,7 +251,7 @@ a {
   &menu {
     display: none;
 
-    @include mediaQuery-pc {
+    @include breakpoint-pc {
       display: flex;
       padding: 0;
       position: static;
@@ -274,7 +273,7 @@ a {
       border-width: 0 0 20px 20px;
       border-color: transparent transparent #ffffff transparent;
 
-      @include mediaQuery-pc {
+      @include breakpoint-pc {
         display: none;
       }
     }
@@ -302,7 +301,7 @@ a {
     background-color: $primary-white;
 
     // reposition the menu
-    @include mediaQuery-pc {
+    @include breakpoint-pc {
       display: flex;
       padding: 0;
       position: static;
@@ -317,7 +316,7 @@ a {
   &item {
     margin: 15px 0;
 
-    @include mediaQuery-pc {
+    @include breakpoint-pc {
       margin: 0 10px;
     }
   }
@@ -326,7 +325,7 @@ a {
     color: $dark-grayish-blue;
     padding: 15px 30px;
     border-radius: 100px;
-    @include mediaQuery-pc {
+    @include breakpoint-pc {
       color: $white;
       transition: background-color 0.5s, color 0.5s;
     }
@@ -338,12 +337,12 @@ a {
       color: $black;
       @extend %toUpperCase;
 
-      @include mediaQuery-pc {
+      @include breakpoint-pc {
         color: $very-dark-desaturated-blue;
         background-color: $white;
       }
     }
-    @include mediaQuery-pc {
+    @include breakpoint-pc {
       &:hover {
         background-color: $white-opacity;
         color: $white;
@@ -354,7 +353,7 @@ a {
 
 /* ---- feature ---- */
 
-@include mediaQuery-pc {
+@include breakpoint-pc {
   .feature-card {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -376,7 +375,7 @@ a {
     padding: 13.3333333333% 8%;
     // padding: 50px 30px;
 
-    @include mediaQuery-pc {
+    @include breakpoint-pc {
       text-align: left;
       place-self: center;
       padding: 50px 30px;
@@ -401,7 +400,7 @@ a {
   &pic {
     width: 100%;
 
-    @include mediaQuery-pc {
+    @include breakpoint-pc {
       width: 100%;
       height: 100%;
       -o-object-fit: contain;
@@ -421,7 +420,7 @@ a {
     margin-bottom: 9.52380952381%;
     // margin-bottom: 30px;
 
-    @include mediaQuery-pc {
+    @include breakpoint-pc {
       max-width: 460px;
     }
   }
@@ -465,7 +464,7 @@ a {
 
 // component-service-card
 
-@include mediaQuery-pc {
+@include breakpoint-pc {
   .service-card-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -523,7 +522,7 @@ a {
 .testimonials {
   // padding: 13.3333333333% 10.6666666667%;
   padding: 50px 40px;
-  @include mediaQuery-pc {
+  @include breakpoint-pc {
     padding: 140px 80px;
   }
   .heading {
@@ -539,7 +538,7 @@ a {
 
 // component-client-card
 
-@include mediaQuery-pc {
+@include breakpoint-pc {
   .client-card-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -552,7 +551,7 @@ a {
   text-align: center;
   padding-top: 50px;
 
-  @include mediaQuery-pc {
+  @include breakpoint-pc {
     padding-top: 70px;
   }
 }
@@ -566,7 +565,7 @@ a {
     max-width: 350px;
     color: $very-dark-grayish-blue;
     margin: 30px auto;
-    @include mediaQuery-pc {
+    @include breakpoint-pc {
       margin: 50px auto;
     }
   }
@@ -587,7 +586,7 @@ a {
 .gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  @include mediaQuery-pc {
+  @include breakpoint-pc {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
@@ -599,7 +598,7 @@ a {
   text-align: center;
   .logo {
     margin-bottom: 30px;
-    @include mediaQuery-pc {
+    @include breakpoint-pc {
       width: 150px;
     }
   }
@@ -616,7 +615,7 @@ a {
   }
   &item {
     margin: 0 30px;
-    @include mediaQuery-xs-sm {
+    @include breakpoint-phone {
       margin: 0 10px;
     }
   }
@@ -639,7 +638,7 @@ a {
     font-size: 1.3em;
     transition: color 0.5s;
 
-    @include mediaQuery-xs-sm {
+    @include breakpoint-phone {
       font-size: 1em;
     }
 
