@@ -1,7 +1,7 @@
 /* Colors */
 $red: hsl(7, 99%, 70%);
 $yellow: hsl(51, 100%, 49%);
-$dark-cyan: hsl(168, 45%, 32%);
+$dark-green: hsl(168, 45%, 32%);
 $desaturate-cyan: hsl(167, 40%, 24%);
 $dark-blue: hsl(198, 62%, 26%);
 $dark-navy-blue: hsl(211, 26%, 19%);
@@ -11,6 +11,7 @@ $grayish-blue: hsl(232, 9%, 54%);
 $grayish-white: hsl(210, 3%, 66%);
 $bg-white-cream: hsl(34, 100%, 98%);
 $white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
 $contact-bg-hover: rgba($white, 0.2537);
 
 /* Fonts */
@@ -25,8 +26,13 @@ $font-text-art: 1.6rem;
 $font-link: 1.5rem;
 $font-client-job: 1.4rem;
 $font-weight-text: 600;
-$font-weight-text: 700;
+$font-weight-medium: 700;
 $font-weight-bold: 900;
 
+/* --- Font --- */
+$heading-line-height: 1.2;
+$text-line-height: 1.7;
+
+/* ---- breakpoint ---- */
+$width-phone: 420px;
 $width-pc: 760px;
-$width-phone: 380px;

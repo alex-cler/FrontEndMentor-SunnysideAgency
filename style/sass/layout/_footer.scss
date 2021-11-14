@@ -14,8 +14,9 @@
 		margin-bottom: 60px;
 	}
 	&__list--link {
+		display: inline;
 		font-size: $font-text;
-		color: $dark-cyan;
+		color: $desaturate-cyan;
 		text-decoration: none;
 		margin: 0 28px;
 		transition: 0.5s;
@@ -35,7 +36,7 @@
 	margin-bottom: 60px;
 	&--link {
 		padding: 0.75em;
-		color: $dark-cyan;
+		color: $desaturate-cyan;
 		text-decoration: none;
 		transition: 0.5s;
 		font-size: $font-heading-client;
@@ -44,3 +45,4 @@
 		}
 	}
 }
+

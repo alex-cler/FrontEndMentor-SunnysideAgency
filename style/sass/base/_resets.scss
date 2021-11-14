@@ -6,6 +6,29 @@
   font: inherit;
   vertical-align: baseline;
 }
+
+body {
+	font-family: 'Barlow', sans-serif;
+	font-weight: 600;
+	font-size: 1.8rem;
+	background-color: hsl(34, 100%, 98%);
+	color: hsl(233, 10%, 55%);
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 /* HTML5 display-role reset for older browsers */
 /* article,
 aside,
@@ -24,10 +47,6 @@ main {
 body {
   line-height: 1;
 }
-ol,
-ul {
-  list-style: none;
-}
 blockquote,
 q {
   quotes: none;
@@ -43,8 +62,3 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 } */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}

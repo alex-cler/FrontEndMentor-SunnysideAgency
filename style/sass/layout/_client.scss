@@ -1,42 +1,49 @@
 .feedback {
-	display: flex;
-	flex-flow: column wrap;
-	align-items: center;
-	padding: 9em 0;
-	h3 {
-		font-family: $secondary-font;
-        font-size: $font-heading-client;
-		color: $grayish-white;
-		text-transform: uppercase;
-		letter-spacing: 5px;
-		padding-bottom: 4.5em;
-	}
-}
+  // padding: 13.3333333333% 10.6666666667%;
+  padding: 50px 40px;
+  @include breakpoint-pc {
+    padding: 140px 80px;
+  }
+  .heading {
+    font-family: $secondary-font;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    color: $grayish-white;
+    letter-spacing: 5px;
+    font-size: $font-heading-client;
+    @extend %uppercase;
+  }
+  
+  @include breakpoint-pc {
+    .client-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 30px;
+    }
+  }
 
-.client__container {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 30px;
-    @include mediaQuery-phone {
-		background-color: blue;
-	}
-}
-
-.client {
-	width: 350px;
-	text-align: center;
-	&__image {
-        width: 70px;
-		border-radius: 100%;
-	}
+  .client {
+    width: 350px;
+    text-align: center;
+    padding-top: 50px;
+    @include breakpoint-pc {
+      padding-top: 70px;
+    }
+    &__image {
+          width: 70px;
+      border-radius: 100%;
+    }
     &__feedback {
-        font-size: $font-text;
-        max-width: 350px;
-        color: $dark-grayish-blue;
-        margin: 30px auto 75px auto;
-        /* Accurate design :) */
-        letter-spacing: -0.13px;
-        line-height: 1.8em;
+      max-width: 350px;
+      font-size: $font-text;
+      color: $dark-grayish-blue;
+      margin: 30px auto;
+      @include breakpoint-pc {
+          margin: 50px auto;
+      }
+      /* Accurate design :) */
+      letter-spacing: -0.13px;
+      line-height: 1.8em;
     }
     &__name {
         font-family: $secondary-font;
@@ -49,4 +56,5 @@
         font-size: $font-client-job;
         color: $grayish-blue;
     }
+  }   
 }

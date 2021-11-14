@@ -1,3 +1,4 @@
+// Background setting
 @mixin background(
   $size: cover,
   $position-x: center,
@@ -10,26 +11,27 @@
   @content;
 }
 
-/* Mixins to manage responsiveness */
-/* @mixin breakpoint($breakpoint) {
-  @media (max-width: map-get($breakpoints, $breakpoint)) {
-      @content;
-  }
-} */
-@mixin mediaQuery-pc {
-  @media screen and (min-width: $width-pc) {
-    @content;
-  }
-}
-
-@mixin mediaQuery-phone {
+// Different breakpoints format
+@mixin breakpoint-phone {
   @media screen and (max-width: $width-phone) {
     @content;
   }
 }
 
+@mixin breakpoint-pc {
+  @media screen and (min-width: $width-pc) {
+    @content;
+  }
+}
+
+// Placeholder
+%margin-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 %uppercase {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 %linkreset {

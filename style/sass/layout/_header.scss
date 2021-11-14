@@ -1,69 +1,67 @@
-h1 {
-	font-family: $secondary-font;
-	font-size: $font-title-header;
-	color: $white;
-	text-transform: uppercase;
-	letter-spacing: 8.75px;
-	margin-top: 100px;
-	@include mediaQuery-phone {
-		font-size: 4rem;
+ .header {
+	@include background {
+		background-image: url("/assets/image-header.jpg");
 	}
-}
-
-/* NavBar display */
-nav {
-	width: calc(100vw - (96px));
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	padding-top: 60px;
-	li {
-		@include mediaQuery-phone {
-			display: none;
-		}
+	@include breakpoint-pc {
+		background-image: url("/assets/image-header.jpg");
 	}
-	a {
-		font-size: $font-text;
-		text-decoration: none;
-		color: $white;
-		margin-left: 50px;
-	}
-	button {
-		@include mediaQuery-pc {
-			display: none;
-		}
-	}
-}
-
-.contact {
-	font-family: $secondary-font;
-	font-size: $font-link;
-	text-transform: uppercase;
-	color: $dark-blue;
-	background-color: $white;
-	padding: 1em 1.5em;
-	border-radius: 50px;
-	transition: 0.5s;
-	&:hover {
-		color: $white;
-		background-color: $contact-bg-hover;
-	}
-}
-
-header {
-	background: url("/assets/image-header.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
 	min-width: 100vw;
 	height: 100vh;
 	text-align: center;
-}
+	nav {
+		display: flex;
+    justify-content: space-between;
+    width: 92.5vw;
+    @extend %margin-center;
+	  margin-bottom: 130px;
+	  @include breakpoint-pc {
+      margin-bottom: 100px;
+      padding-top: 35px;
+	  }
+	}
+  
+	.arrow {
+	  animation: upanddown 2.25s infinite;
+	  position: absolute;
+	  left: 48.75%;
+	  top: 45%;
+	  transform: translate(-50%, 0);
+	  @include breakpoint-phone {
+		  left: 47.5%;
+		  width: 30px;
+		  height: 108px;
+	  }
+	}
+	.title {
+		font-family: $secondary-font;
+		font-weight: $font-weight-bold;
+		color: $white;
+		line-height: $heading-line-height;
+		margin-top: 100px;
+		letter-spacing: 8.75px;
+		@extend %uppercase;
+	
+		@include breakpoint-phone {
+		  font-size: $font-heading;
+		}
+	
+		@include breakpoint-pc {
+		  font-size: $font-title-header;
+		}
+	}
 
-.arrow {
-    animation: upanddown 2.25s infinite;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-    transform: translate(-50%, 0);
-}
+	.contact {
+		font-family: $secondary-font;
+		font-size: $font-link;
+		text-transform: uppercase;
+		color: $dark-blue;
+		background-color: $white;
+		padding: 1em 1.5em;
+		border-radius: 50px;
+		transition: 0.5s;
+		&:hover {
+			color: $white;
+			background-color: $contact-bg-hover;
+		}
+	}
+  }
