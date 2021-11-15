@@ -1,6 +1,5 @@
 .feedback {
-  // padding: 13.3333333333% 10.6666666667%;
-  padding: 50px 40px;
+  padding: 13.3333333333% 10.6666666667%;
   @include breakpoint-pc {
     padding: 140px 80px;
   }
@@ -18,7 +17,7 @@
     .client-container {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      column-gap: 30px;
+      place-items: center;
     }
   }
 
@@ -30,7 +29,7 @@
       padding-top: 70px;
     }
     &__image {
-          width: 70px;
+      width: 70px;
       border-radius: 100%;
     }
     &__feedback {
