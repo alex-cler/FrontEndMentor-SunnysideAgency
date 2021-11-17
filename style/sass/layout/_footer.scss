@@ -1,3 +1,12 @@
+/* Footer gallery */
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	@include breakpoint-pc {
+	  grid-template-columns: repeat(4, 1fr);
+	}
+}
+
 .footer {
 	background-color: $cyan-footer;
 	text-align: center;

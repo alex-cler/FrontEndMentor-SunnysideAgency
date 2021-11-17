@@ -1,121 +1,135 @@
-main {
-	display: flex;
-	flex-flow: row wrap;
-}
-
-.feature__ {
-	width: 50vw;
-	height: 600px;
-	&container {
-		width: 50vw;
-		text-align: left;
-    	padding: 12.5% 8%;
-		@media screen and (max-width: 480px) {
-			width: 100vw;
-		}
+.feature {
+	&__container {
+	  text-align: center;
+	  padding: 13.3333333333% 8%;
+	  padding: 50px 30px;
+  
+	  @include breakpoint-pc {
+      text-align: left;
+      place-self: center;
+      padding: 50px 30px;
+      max-height: 500px;
+      overflow: auto;
+	  }
 	}
-	&image {
-		@include mediaQuery-phone {
-			width: 100vw;
-		}
+	&__image {
+	  width: 100%;
+  
+	  @include breakpoint-pc {
+		width: 100%;
+		height: 100%;
+		-o-object-fit: contain;
+		object-fit: cover;
+	  }
 	}
-	&heading {
-		font-family: $secondary-font;
-		font-size: $font-heading-feature;
-		width: 445px;
-		color: $dark-navy-blue;
+	&__heading {
+	  font-family: $secondary-font;
+	  font-weight: $font-weight-bold;
+	  font-size: 3.2rem;
+	  color: $dark-navy-blue;
+	  line-height: $heading-line-height;
+	  margin-bottom: 10%
 	}
-	&text {
-		font-size: $font-text;
-		color: $grayish-blue;
-		padding: 4em 0;
-		letter-spacing: -0.13px;
-		line-height: 30px;
-		width: 445px;
+	&__text {
+	  margin-bottom: 10%;
+  
+	  @include breakpoint-pc {
+		max-width: 460px;
+	  }
 	}
-	&link {
-		font-family: $secondary-font;
-		font-size: $font-text;
-		display: inline-block;
-		color: $dark-navy-blue;
-		position: relative;
-		line-height: 1.6;
-		@extend %uppercase;
-		@extend %linkreset;
-	
-		&::after {
-		  content: '';
-		  position: absolute;
-		  left: -8px;
-		  bottom: 0;
-		  z-index: -1;
-		  display: block;
-		  width: calc(100% + 16px);
-		  border-radius: 100px;
-		  height: 10px;
-		  opacity: 0.25;
-		  transition: 0.5s;
-		}
-		/* Hover state */
-		&:hover::after {
-			opacity: 1;
-		}
+	&__link {
+	  display: inline-block;
+	  font-family: $secondary-font;
+	  font-weight: $font-weight-bold;
+	  color: $dark-navy-blue;
+	  position: relative;
+	  line-height: 1.6;
+	  @extend %uppercase;
+  
+	  &::after {
+      content: '';
+      position: absolute;
+      left: -8px;
+      bottom: 0;
+      z-index: -1;
+      display: block;
+      width: calc(100% + 16px);
+      border-radius: 100px;
+      height: 10px;
+      opacity: 0.25;
+      transition: opacity 0.5s;
+	  }
+	  &:hover::after {
+		  opacity: 1;
+	  }
 	}
-	&link--yellow {
-		&::after {
-		background-color: $yellow;
-		}
+	&__link--yellow {
+	  &::after {
+		  background-color: $yellow;
+	  }
 	}
-	&link--red {
-		&::after {
-		background-color: $red;
-		}
-	}
-	&design {
-		padding: 400px 30px 50px;
-  		text-align: center;
-		color: $desaturate-cyan;
-		@include background {
-		background-image: url('/assets/image-graphic-design.jpg');
-		}
-		@media screen and (max-width: 480px) {
-			width: 100vw;
-		}
-	}
-	&photography {
-		padding: 400px 30px 50px;
-  		text-align: center;
-		color: $dark-blue;
-		@include background {
-		background-image: url('/assets/image-photography.jpg');
-		}
-		@media screen and (max-width: 480px) {
-			width: 100vw;
-		}
+	&__link--red {
+	  &::after {
+		  background-color: $red;
+	  }
 	}
 }
+  // component-service-card
 
-.heading {
+@include breakpoint-pc {
+  .service-card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.service-card {
+  padding: 400px 30px 50px;
+  text-align: center;
+
+  .heading {
     font-family: $secondary-font;
-	font-size: $font-heading-art;
+    font-size: $font-heading-art;
     font-weight: $font-weight-bold;
     font-size: 2.4rem;
     margin-bottom: 30px;
-}
-
-.text {
-	max-width: 350px;
+  }
+  
+  .text {
+    max-width: 350px;
     max-height: 180px;
-	font-size: $font-text-art;
-	font-weight: $font-weight-text;
-	margin: 0 auto;
-	line-height: 27px;
+    font-size: $font-text-art;
+    font-weight: $font-weight-text;
+    margin: 0 auto;
+    line-height: 27px;
+  }
+
+  &__design {
+    color: $dark-green;
+    @include background {
+    background-image: url('/assets/image-graphic-design.jpg');
+    }
+  }
+  &__photography {
+    color: $dark-blue;
+    @include background {
+      background-image: url('/assets/image-photography.jpg');
+    }
+  }
 }
 
-.gallery {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	@include breakpoint-pc {
-	  grid-template-columns: repeat(4, 1fr);
-	}
+@include breakpoint-pc {
+  .feature-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    // Alternate picture and description on mobile
+    &:nth-of-type(odd) {
+      .feature {
+        &__container{
+          order: -1;
+        }
+      }
+    }
+  }
 }

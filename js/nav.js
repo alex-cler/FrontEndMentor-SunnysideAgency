@@ -2,17 +2,6 @@ let html = document.getElementById('html')
 let menuBtn = document.getElementById('menuBtn')
 let menu = document.getElementById('menu')
 
-// test
-let hasJavaScript = true;
-
-
-// detect javascript
-if (hasJavaScript) {
-  html.classList.add('js')
-}
-
-
-
 // event binding
 menuBtn.addEventListener('click', toggleMenu, false)
 

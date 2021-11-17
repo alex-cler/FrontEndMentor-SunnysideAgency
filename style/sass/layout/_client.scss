@@ -1,5 +1,5 @@
 .feedback {
-  padding: 13.3333333333% 10.6666666667%;
+  padding: 12.5% 10%;
   @include breakpoint-pc {
     padding: 140px 80px;
   }
@@ -11,6 +11,9 @@
     letter-spacing: 5px;
     font-size: $font-heading-client;
     @extend %uppercase;
+    @include breakpoint-phone {
+      font-size: 1.6rem;
+    }
   }
   
   @include breakpoint-pc {
