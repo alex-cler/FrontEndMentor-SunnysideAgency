@@ -17,8 +17,12 @@
 			margin-bottom: 100px;
 			padding: 35px;
 		}
+		@include breakpoint-phone {
+			height: 75px;
+			width: 90vw;
+			align-items: center;
+		}
 	}
-  
 	.arrow {
 	  animation: upanddown 2.25s infinite;
 	  position: absolute;
