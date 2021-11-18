@@ -1,22 +1,9 @@
-let html = document.getElementById('html')
-let menuBtn = document.getElementById('menuBtn')
-let menu = document.getElementById('menu')
+let menuBtn = document.querySelector('menuBtn');
+let menu = document.querySelector('menu');
 
 // event binding
-menuBtn.addEventListener('click', toggleMenu, false)
+menuBtn.addEventListener('click', () => {
+    p.style.backgroundColor= "red";
+    menu.classList.toggle('active')
+})
 
-// turn on / off the menu
-function toggleMenu() {
-  // if the menu is active
-  if(menu.classList.contains('global-nav__menu--active')) {
-    // set aria-expanded of the button to false 
-    this.setAttribute('aria-expanded', 'false')
-    // open the menu
-    menu.classList.remove('global-nav__menu--active')
-  } else {
-    // set aria-expanded of the button to true
-    this.setAttribute('aria-expanded', 'true')
-    // close the menu
-    menu.classList.add('global-nav__menu--active')
-  }
-}

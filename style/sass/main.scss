@@ -73,31 +73,15 @@ img {
       -moz-box-shadow: none;
     }
 
-    &::after {
-      content: '';
-      position: absolute;
-      top: -19px;
-      right: 0;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 0 0 20px 20px;
-      border-color: transparent transparent #ffffff transparent;
-
-      @include breakpoint-pc {
-        display: none;
-      }
-    }
-
     &--active {
       display: block;
     }
   } */
 }
 
-
 .global-nav__ {
   &menu-btn {
+    cursor: pointer;
     @include breakpoint-pc {
       display: none;
     }
@@ -107,10 +91,13 @@ img {
   &menu {
     position: absolute;
     width: 90%;
-    top: 90px;
+    top: 110px;
     padding: 20px 0;
     background-color: $white;
     z-index: 10;
+    &.active {
+      display: none;
+    }
 
     @include breakpoint-pc {
       display: flex;
@@ -122,13 +109,12 @@ img {
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
     }
+    /* Top right white triangle */
     &::after {
       content: '';
       position: absolute;
       top: -20px;
       right: 0;
-      width: 0;
-      height: 0;
       border-style: solid;
       border-width: 0 0 30px 30px;
       border-color: transparent transparent #ffffff transparent;
